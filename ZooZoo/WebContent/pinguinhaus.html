@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="./img/pinguinLogo.png" type="image/x-icon">
+<title>PinguinHaus</title>
+<link rel="stylesheet" type="text/css" href="./css/haus.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    function swing() {
+        $('img').animate({'opacity':'0.85'},900).animate({'opacity':'1.0'},1000, swing);
+    }
+    swing();
+});
+</script>
+</head>
+<body>
+<img alt="PinguinHaus" src="./img/pinguin.png">
+<div id="logo">
+<form action="login.do" method="post">
+<span>Email</span><span>Password</span><br>
+<input type="text" class="text" name="id" placeholder="Enter Email" required>
+<input type="password" class="text" name="psw" placeholder="Enter Password" required><br>
+<input type="submit" value="login" id="loginBtn">
+<a href="joinPage.jsp">join</a>
+</form>
+</div>
+<footer>
+<p>design By.ZooStdio</p>
+</footer>
+</body>

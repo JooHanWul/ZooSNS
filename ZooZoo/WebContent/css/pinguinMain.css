@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+#cover {
+	/* background-image: url(../img/pinguinMain.jpg);
+	background-size: cover; */
+	background-color: #F0FFF0;
+	color: #02004a;
+	margin: 0px;
+	padding: 0px;
+}
+
+#headerCon {
+	width: 100%;
+	height: 200px;
+	background: linear-gradient(to bottom, #00ff7f 0%, #F0FFF0 100%);
+	position: fixed;
+	z-index: 5;
+}
+
+#header {
+	width: 1000px;
+	height: 200px;
+	/* border: solid 1px black; */
+	position: fixed;
+	right: 50%;
+	margin-right: -500px;
+	z-index: 4;
+}
+
+#footerDiv {
+	width: 1000px;
+	height: auto;
+	margin: auto;
+	text-align: right;
+	color: #000946;
+}
+
+#logo {
+	width: 150px;
+	height: 150px;
+	margin: 25px;
+	float: left;
+}
+
+#profileImg {
+	width: 150px;
+	height: 150px;
+	margin: 25px;
+	border-radius: 75px;
+	background-color: white;
+	float: right;
+	overflow: hidden;
+}
+
+#info {
+	width: auto;
+	height: 150px;
+	float: right;
+	margin: 25px;
+}
+
+#infoS {
+	font-size: 32pt;
+}
+
+#mainDiv {
+	border: solid 1px tomato;
+	width: 1000px;
+	height: 1000px;
+	margin: auto;
+}
+
+.nullDiv {
+	width: 1000px;
+	height: 210px;
+	margin: auto;
+}
+
+#nullDiv2 {
+	width: 500px;
+	height: 130px;
+	margin: auto;
+}
+
+#write {
+	width: 500px;
+	height: auto;
+	position: fixed;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -11px;
+	border-radius: 2px;
+	background: linear-gradient(to top right, #66ffff 0%, #ffffcc 70%);
+	z-index: 3;
+}
+
+#timeLine {
+	width: 476px;
+	height: 80px;
+	margin: 10px;
+	padding: 5px;
+	border: 0px;
+	resize: none;
+}
+
+.pdata {
+	font-size: 10pt;
+	color: #708090;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.tlB {
+	background-color: #FFFFF0;
+	margin: 0px;
+	padding-left: 4px;
+	padding-right: 4px;
+	width: 476px;
+	height: 100%;
+	border-radius: 2px;
+}
+
+.showtimeline {
+	width: 484px;
+	height: auto;
+	position: relative;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	border-style: solid;
+	border-image: linear-gradient(to top right, #FFCC99 0%, #FF99CC 90%);
+	border-image-width: 8px;
+	border-image-slice: 1;
+	border-radius: 10px;
+	z-index: 2;
+}
+
+.tl {
+	color: #000000;
+}
+
+#menuBox {
+	width: 40px;
+	height: 40px;
+	margin: auto;
+}
+
+#menuBtn {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-image: url("../img/button.png");
+	background-size: cover;
+	border: none;
+	position: absolute;
+	left: 690px;
+	z-index: 6;
+}
+
+#logout {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-image: url("../img/exit.png");
+	background-size: cover;
+	border: none;
+	position: absolute;
+	left: 630px;
+	z-index: 5;
+}
+
+#update {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-image: url("../img/edit.png");
+	background-size: cover;
+	border: none;
+	position: absolute;
+	right: 215px;
+	z-index: 4;
+}
+
+#profileUpdate {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-image: url("../img/profileUpdate.png");
+	background-size: cover;
+	border: none;
+	position: absolute;
+	top: 125px;
+	right: 243px;
+	z-index: 4;
+}
+
+#freund{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-image: url("../img/freund.png");
+	background-size: cover;
+	border: none;
+	position: absolute;
+	top: 125px;
+	right: 303px;
+	z-index: 4;
+}
+
+#oriPro {
+	width: 600px;
+	height: 600px;
+	margin: auto;
+}
+
+#pBo {
+	width: 400px;
+	height: 400px;
+	border: solid 5px gray;
+	border-radius: 200px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.ppBtn {
+	margin:auto;
+	background-color: #46baff;
+	color: snow;
+	border: none;
+	border-radius: 8px;
+	font-size: 18pt;
+	width: 70px;
+	height: 40px;
+}
+
+.ppBtn:hover {
+	margin:auto;
+	background-color: #007eca;
+	color: snow;
+	border: none;
+	border-radius: 8px;
+	font-size: 18pt;
+	width: 70px;
+	height: 40px;
+}

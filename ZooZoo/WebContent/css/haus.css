@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+body {
+	background-image: url(../img/Brick.png);
+	background-size: cover;
+	color: #E0FFFF;
+}
+
+#logo {
+	margin: auto;
+	width: 345px;
+}
+
+#logo span:first-child {
+	width: 175px;
+	display: inline-block;
+}
+
+img {
+	margin-top: 8em;
+	width: 850px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	opacity:1;
+}
+
+.text {
+	background: #333333;
+	width: 159px;
+	color: #00ccff;
+	border: none;
+	border-right: 0px;
+	border-top: 0px;
+	boder-left: 0px;
+	boder-bottom: 0px;
+	border-radius: 2px;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.text:focus {
+	background: #ffffff;
+	width: 159px;
+	color: black;
+	border: none;
+	border-right: 0px;
+	border-top: 0px;
+	boder-left: 0px;
+	boder-bottom: 0px;
+	border-radius: 2px;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#loginBtn {
+	float: right;
+	background: #333333;
+	border: 1px solid black;
+	color: #00ccff;
+	font-size: 10pt;
+	margin-top: 5px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 2px;
+}
+
+#loginBtn:hover {
+	float: right;
+	background: #222222;
+	border: 1px solid black;
+	color: #00ccff;
+	font-size: 10pt;
+	margin-top: 5px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 2px;
+}
+
+a {
+	color: #E0FFFF;
+	text-decoration: none;
+	float: right;
+	padding: 5px;
+	padding-right: 10px;
+}
+
+a:hover {
+	color: #E0FFFF;
+	text-decoration: underline;
+	float: right;
+	padding: 5px;
+	padding-right: 10px;
+}
+footer {
+	color: #707070;
+	font-size: 8pt;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}

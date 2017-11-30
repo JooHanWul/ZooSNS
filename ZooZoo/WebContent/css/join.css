@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+body {
+	background-image: url(../img/Brick1.png);
+	background-size: cover;
+	color: #E0FFFF;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+}
+
+input[type=radio] {
+	width: 20%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+select {
+	width: 32%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+	padding: 14px 20px;
+	background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+	float: right;
+	width: 30%;
+}
+
+/* Add padding to container elements */
+.container {
+	padding: 16px;
+	width: 400px;
+	margin: auto;
+}
+
+/* Clear floats */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#profileImg {
+	width: 350px;
+	height: 350px;
+	margin: 25px;
+	border-radius: 175px;
+	background-color: white;
+	float: right;
+	overflow: hidden;
+}
