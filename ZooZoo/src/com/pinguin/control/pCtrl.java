@@ -9,7 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.pinguin.command.action;
+import com.pinguin.command.pAddFreund;
+import com.pinguin.command.pChatting;
+import com.pinguin.command.pDelFreund;
+import com.pinguin.command.pDelTimeline;
+import com.pinguin.command.pError;
 import com.pinguin.command.pFreund;
+import com.pinguin.command.pFreundView;
 import com.pinguin.command.pIndex;
 import com.pinguin.command.pInfoUpdate;
 import com.pinguin.command.pJoin;
@@ -18,6 +24,7 @@ import com.pinguin.command.pLogout;
 import com.pinguin.command.pProfile;
 import com.pinguin.command.pProfileUpdate;
 import com.pinguin.command.pReadTimeLine;
+import com.pinguin.command.pReply;
 import com.pinguin.command.pTimeLineUpload;
 import com.pinguin.command.pUpdate;
 
@@ -72,6 +79,10 @@ public class pCtrl extends HttpServlet {
 			System.out.println("Action logout");
 			ac = new pLogout();
 			ac.execute(request, response);
+		} else if (command.equals("/error.do")) {
+			System.out.println("Action Error");
+			ac = new pError();
+			ac.execute(request, response);
 		} else if (command.equals("/update.do")) {
 			System.out.println("Action user update");
 			ac = new pUpdate();
@@ -103,6 +114,30 @@ public class pCtrl extends HttpServlet {
 		} else if (command.equals("/freund.do")) {
 			System.out.println("Action freund Update");
 			ac = new pFreund();
+			ac.execute(request, response);
+		} else if (command.equals("/addFreund.do")) {
+			System.out.println("Action Add Freund");
+			ac = new pAddFreund();
+			ac.execute(request, response);
+		} else if (command.equals("/delFreund.do")) {
+			System.out.println("Action Delete Freund");
+			ac = new pDelFreund();
+			ac.execute(request, response);
+		} else if (command.equals("/reply.do")) {
+			System.out.println("Action Reply");
+			ac = new pReply();
+			ac.execute(request, response);
+		} else if (command.equals("/freundView.do")) {
+			System.out.println("Action freundView");
+			ac = new pFreundView();
+			ac.execute(request, response);
+		} else if (command.equals("/chatting.do")) {
+			System.out.println("Action Chatting");
+			ac = new pChatting();
+			ac.execute(request, response);
+		} else if (command.equals("/delTimeline.do")) {
+			System.out.println("Action Delete Timeline");
+			ac = new pDelTimeline();
 			ac.execute(request, response);
 		}
 	}

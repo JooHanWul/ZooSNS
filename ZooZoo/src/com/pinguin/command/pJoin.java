@@ -30,7 +30,8 @@ public class pJoin implements action {
 			viewPage = "index.do";
 			// viewPage = "readTimeLine.do";
 		} else {
-			viewPage = "pinguinhaus.html";
+			request.setAttribute("errorCode", "JoinFalse");
+			viewPage = "error.do";
 		}
 
 		dto = pDao.userInfo(id, pw);

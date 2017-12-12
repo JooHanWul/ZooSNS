@@ -1,13 +1,5 @@
 package com.pinguin.dao;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -159,64 +151,51 @@ public class pinguinDao {
 		
 		return freundList;
 	}
-
-	//
-	public static void conductSe(String id,ArrayList<String> list) {
-		fList = list;
+	
+	public String[] freundInfo(String id) {
+		String[] f = new String[2];
+		
 		try {
-			FileOutputStream fos = new FileOutputStream("./freund/"+".txt");
-			BufferedOutputStream bos = new BufferedOutputStream(fos);
-			ObjectOutputStream out = new ObjectOutputStream(bos);
-
-			for (String u : fList) {
-				out.writeObject(u);
+			conn = dbconn.getConn();
+			sql = "select name, PROFILEIMG from custom where id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				f[0] = rs.getString(1);
+				f[1] = rs.getString(2);
 			}
 			
-			out.writeObject(fList);
-			
-			out.close();
-			bos.close();
-			fos.close();
-			System.out.println("직렬화 완료");
-
-		} catch (FileNotFoundException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+		} finally {
+			dbconn.close(conn, pstmt);
 		}
-
+		
+		return f;
 	}
 
-	public static void conductDe() {
+	public boolean update(String id, String pw, String newPw, String name) {
+		boolean check = true;
+		
 		try {
-			FileInputStream fis = new FileInputStream("./test/backup.txt");
-			BufferedInputStream bis = new BufferedInputStream(fis);
-			ObjectInputStream in = new ObjectInputStream(bis);
-
-			Object i;
-			for (;;) {
-				i = in.readObject();
-				// if (i instanceof user) {
-				// user u = (user) i;
-				// } else {
-				// uList = (ArrayList) i;
-				// break;
-				// }
-			}
-
-//			in.close();
-//			bis.close();
-//			fis.close();
-
-//			System.out.println("초기화 성공");
-
-		} catch (FileNotFoundException e) {
+			conn = dbconn.getConn();
+			sql = "update custom set pw=MD5_CRIPT(?), name=? where id=? and MD5_CRIPT(?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, newPw);
+			pstmt.setString(2, name);
+			pstmt.setString(3, id);
+			pstmt.setString(4, pw);
+			
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			check = false;
+		} finally {
+			dbconn.close(conn, pstmt);
 		}
+		return check;
 	}
 
 }
